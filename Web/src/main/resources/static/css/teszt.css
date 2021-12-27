@@ -1,0 +1,262 @@
+div.fejlec{
+	height:40px;
+	background-color:#BE9667;
+	align:center;
+	
+	
+	
+}
+div.logo_container{
+	
+	padding:px;
+	background-color:transparent;
+	align:center;
+	
+	
+	
+}
+
+span.telefonszam{
+	
+	 color: white;
+	 margin:60px;
+	 padding:8px
+	
+	
+}
+span.email_cim{
+	
+	 color: white;
+	 margin:15px;
+	 padding:8px
+	
+	
+}
+span.ikon{
+	
+	 color: white;
+	 margin:15px;
+	 padding:8px
+	
+	
+}
+
+
+div.sor
+            {   
+                width:40%;
+                height:20%;
+                align:center;
+                margin-left: 36%;
+                padding:15px;
+            }
+            
+            div.kepDiv
+            {
+                width:65%;
+                height:100%;
+                float:center;
+                 align:center;
+            }
+            
+            img.kep
+            {
+                width:100%;
+                height:100%;
+                 align:center;
+            }
+
+
+#linknavbar {
+background: transparent;
+width: 1280px;
+height: 40px;
+color: #FFF;
+margin-left: 20%;
+padding: 30px;
+}
+#linknav {
+margin: 0;
+padding: 0;
+}
+#linknav ul {
+float: left;
+list-style: none;
+margin: 0;
+padding: 0;
+}
+#linknav li {
+list-style: none;
+margin: 0;
+padding: 0;
+float: left;
+}
+#linknav li a, #linknav li a:link, #linknav li a:visited {
+color: rgb(0, 0, 0);
+display: block;
+font-size: 16px;
+font-weight: bold;
+text-transform: uppercase;
+margin: 0 5px 0 0;
+padding: 6px 13px;
+}
+#linknav li a:hover, #linknav li a:active {
+background:transparent;
+color: rgb(190, 150, 103);  
+display: block;
+text-decoration: none;
+margin: 0 5px 0 0;
+padding: 6px 13px;
+}
+#linknav li:hover, #linknav li.sfhover {
+position: static;
+}
+
+.parent {
+display: grid;
+grid-template-columns: repeat(12, 1fr);
+grid-template-rows: repeat(8, 1fr);
+grid-column-gap: 5px;
+grid-row-gap: 5px;
+}
+,navbar navbar-expand-lg{
+	
+	
+	padding:130px,
+}
+.carousel .item {
+  height: 300px;
+}
+
+.item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 300px;
+}
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+html,body{
+  display: grid;
+  height: 100%;
+  place-items: center;
+  text-align: center;
+  background: #f2f2f2;
+}
+.containers{
+  position: relative;
+  height: 500px;
+  width: 400px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.3);
+  transition: 0.3s ease-out;
+}
+.containers:hover{
+  box-shadow: 0px 1px 35px 0px rgba(0,0,0,0.3);
+}
+.containers .image{
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  transition: transform 0.3s ease-out;
+}
+.containers:hover .image{
+  transform: translateY(-100px);
+}
+.image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease-out;
+}
+.containers:hover .image img{
+  opacity: 0.7;
+}
+.containers:hover .image{
+ transform: translateY(-100px);
+}
+.containers ul{
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  list-style: none;
+}
+
+.containers:hover > ul > li > a{
+  opacity: 1;
+  transform: translateY(0);
+}
+.containers:hover > ul > li:nth-child(2) a{
+  transition-delay: 0.1s;
+}
+.containers:hover > ul > li:nth-child(3) a{
+  transition-delay: 0.2s;
+}
+.containers:hover > ul > li:nth-child(4) a{
+  transition-delay: 0.3s;
+}
+.containers:hover > ul > li:nth-child(5) a{
+  transition-delay: 0.4s;
+}
+.containers .content{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+.info{
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  width: 100%;
+  color: #000;
+  line-height: 26px;
+}
+.info h2{
+  font-size: 27px;
+  margin: 3px 0;
+}
+.info span{
+  color: #1a1a1a;
+}
+
+
+.parent {
+display: grid;
+grid-template-columns: repeat(12, 1fr);
+grid-template-rows: repeat(5, 1fr);
+grid-column-gap: 50px;
+grid-row-gap: 15px;
+}
+
+.div1 { grid-area: 1 / 1 / 2 / 7; }
+.div2 { grid-area: 1 / 7 / 2 / 13; }
+.div3 { grid-area: 2 / 1 / 3 / 7; }
+.div4 { grid-area: 2 / 7 / 3 / 13; }
+.div5 { grid-area: 3 / 1 / 4 / 7; }
+.div6 { grid-area: 3 / 7 / 4 / 13; }
+.div7 { grid-area: 4 / 1 / 5 / 7; }
+.div8 { grid-area: 4 / 7 / 5 / 13; }
+.div9 { grid-area: 5 / 1 / 6 / 7; }
+.div10 { grid-area: 5 / 7 / 6 / 13; }
+

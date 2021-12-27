@@ -1,0 +1,50 @@
+body {
+    font-family: "Aller", "sans-serif";  /* just a custom font */
+}
+ 
+ul  
+{
+    list-style-type: none;  /* hiding the bullets from ul */
+}
+ 
+a:-webkit-any-link {
+    text-decoration: none;  /* ignoring default link settings */
+}
+
+.fade {
+   opacity: 0.8;        /* sets default view to a 80% opacity */
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+ 
+.fade:hover {
+      opacity: 1;   /* sets default view to a 100% opacity when on hover state */
+}
+h4 {                            /* style the photos titles */
+    text-align: center;
+    font-size: 1em;
+    margin: 0;
+    padding: 0.5em 2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: black;
+}
+ 
+h1 {                                   /* just a main title alignment */
+    padding-left: 10em;
+}
+
+.img-wrapper {                                 /* this will be the wrapping box */
+    width: 0px;
+    height: 0x;
+    border: 0.1em solid #ccc;
+    border-radius: 0.4em;
+    background-color: #f3f3f3;
+    box-shadow: 0.1em 0.1em 0.5em -0.2em #777;
+    margin: 1em 1em;
+}
+ 
+img {
+    border-radius: 0.4em 0.4em 0em 0em;    /* radius should be the same as the wrapper */
+}

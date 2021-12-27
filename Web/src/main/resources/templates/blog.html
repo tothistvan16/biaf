@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<title>Material Design for Bootstrap</title>
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+	<!-- MDB -->
+	<link rel="stylesheet" href="css/mdb.min.css" />
+	<!-- Custom styles -->
+	<link rel="stylesheet" href="css/blog.css" />
+</head>
+
+<body>
+	<!--Main Navigation-->
+	<header>
+
+		<!-- Fejléc -->
+		<div class="fejlec">
+			<span class="telefonszam">Telefonszám : +36202239149</span>
+			<a href="mailto:biafoto.hu@gmail.com"> <span class="email_cim">Email cím: biafoto.hu@gmail.com</span></a>
+
+			<a href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA" rel="nofollow" target="_blank"> <span
+					class="ikon"> <i class="fab fa-youtube"></i> </span></a>
+
+			<a href="https://www.facebook.com/mdbootstrap" rel="nofollow" target="_blank"> <span class="ikon"> <i
+						class="fab fa-facebook-f"></i> </span></a>
+
+			<a href="https://twitter.com/MDBootstrap" rel="nofollow" target="_blank"> <span class="ikon"> <i
+						class="fab fa-twitter"></i> </span></a>
+
+			<a href="https://github.com/mdbootstrap/mdb-ui-kit" rel="nofollow" target="_blank"> <span class="ikon"> <i
+						class="fab fa-github"></i> </span></a>
+
+		</div>
+
+
+
+
+
+		<div class="sor">
+			<div class="kepDiv">
+				<span class="logo_helper"></span>
+				<a href="/">
+					<img src="img/logo5.png" alt="Biafoto" id="logo" class="kep">
+				</a>
+			</div>
+		</div>
+
+
+
+		<!-- Navbar -->
+		<!--	<nav class="navbar navbar-expand-lg  "> -->
+
+		<div id='linknavbar'>
+			<!--<div class="container-fluid  style="max-width:800px"> -->
+
+			<ul id='linknav'>
+			<li class="gomb1"><a href="fotozas" aria-current="page">FOTÓZÁS</a></li>
+			<li class="gomb1"><a href="portfolio">PORTFÓLIÓ</a></li>
+			<li class="gomb1"><a href="buildweb">WEBOLDAL KÉSZÍTÉS</a></li>
+			<li class="gomb1"><a href="prices">ÁRAK</a></li>
+			<li class="gomb1"><a href="blog">BLOG</a></li>
+			<li class="gomb1"><a href="kapcsolat">KAPCSOLAT</a></li>
+			<li class="gomb1"><a href="reservation">IDŐPONT FOGLALÁS</a></li>
+			<li class="gomb1"><a href="login">OVI/ISKOLA FOTÓK MEGRENDELÉS</a></li>
+			</ul>
+
+		</div>
+
+
+
+		<!-- Navbar 
+
+ 
+    <!-- Carousel wrapper -->
+	</header>
+	<!--Main Navigation-->
+
+	<!--Main layout-->
+	<main class="mt-5">
+		<div class="container">
+			<!--Section: Content-->
+
+
+			<article th:each="storyl : ${storylist}">
+				<div class="row">
+					<div class="col-md-6 gx-5 mb-4">
+						<div class="bg-image hover-overlay ripple shadow-2-strong" data-mdb-ripple-color="light">
+							<img src="img/foto13.jpg" class="img-fluid" th:src="${storyl.imgurl}" />
+							<a href="#!">
+								<div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+							</a>
+						</div>
+					</div>
+
+					<div class="col-md-6 gx-5 mb-4">
+
+						<header>
+							<h4 th:text="${storyl.title}">Ez itt a cím</h4>
+							<p th:text="${#dates.format(storyl.posted, 'yyyy.MM.dd HH:mm')}">Posted on September 31,
+								2015 at 10:00 PM</p>
+						</header>
+
+						<section th:utext="${storyl.content}">
+							<p class="text-muted">
+								Ha felkeltettem az érdeklődésedet, akkor keress bátran portré fotózás ügyben !
+							</p>
+						</section>
+
+						<footer>
+							<address cl>
+								Beküldte: <span th:text="${storyl.blogger.name}">Anonymous</span>
+							</address>
+						</footer>
+					</div>
+				</div>
+			</article>
+
+
+			<section>
+				<div class="form-input" style="text-align:center">
+					<form action="#" th:action="@{/feldolg_blog}" th:object="${storyobj}" method="post">
+
+						<p>Cím: <input type="text" th:field="*{title}" /> </p>
+						<p>Tartalom:</p>
+						<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" th:field="*{content}"></textarea>
+						<p>Blogger
+							<select th:field="*{blogger.id}" >
+								<div>
+
+									<option th:each="bloggers : ${bloggerlist}" th:value="${bloggers.id} "
+										th:text="${bloggers.name}">
+										<label th:text="${bloggers.age}"> </label>
+									</option>
+
+								</div>
+							</select>
+						</p>
+						<p>Kép url: <input type="text" th:field="*{imgurl}" /> </p>
+						<p><input type="submit" value="Submit" /></p>
+
+					</form>
+				</div>
+
+
+
+
+			</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</div>
+		<!--Container-->
+	</main>
+	<!--Main layout
+
+  <!--Footer-->
+
+	<!--Footer-->
+	<!-- MDB -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

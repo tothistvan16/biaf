@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Material Design for Bootstrap</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+      <!--Main Navigation-->
+  <header>
+    <style>
+      /* Carousel styling */
+      #introCarousel,
+      .carousel-inner,
+      .carousel-item,
+      .carousel-item.active {
+        height: 100vh;
+      }
+
+      .carousel-item:nth-child(1) {
+        background-image: url('img/foto04.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+
+      .carousel-item:nth-child(2) {
+        background-image: url('img/foto02.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+
+      .carousel-item:nth-child(3) {
+        background-image: url('img/foto03.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+	  .carousel-item:nth-child(4) {
+        background-image: url('img/foto05.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+	  
+	  .carousel-item:nth-child(5) {
+        background-image: url('img/foto06.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+	  .carousel-item:nth-child(6) {
+        background-image: url('img/foto01.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+	   .carousel-item:nth-child(7) {
+        background-image: url('img/foto07.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+	  
+	  .carousel-item:nth-child(8) {
+        background-image: url('img/foto08.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+	  
+
+      /* Height for devices larger than 576px */
+      @media (min-width: 992px) {
+        #introCarousel {
+          margin-top: -58.59px;
+        }
+      }
+
+      .navbar .nav-link {
+        color: #fff !important;
+      }
+    </style>
+	
+	 <!-- Fejléc --> 
+  <div class="fejlec">
+		<span class="telefonszam">Telefonszám : +36202239149</span>
+	    <a href="mailto:biafoto.hu@gmail.com">  <span class="email_cim">Email cím: biafoto.hu@gmail.com</span></a>
+	  
+</div>		  
+		  
+		  
+		  
+		  
+
+	<div class="sor">
+	<div class="kepDiv">
+		<span class="logo_helper"></span>
+		<a href="/">
+			<img src="img/logo5.png" alt="Biafoto" id="logo" class="kep">
+		</a>
+	</div>
+    </div>
+	
+	
+
+    <!-- Navbar -->
+<!--	<nav class="navbar navbar-expand-lg  "> -->
+
+	<div id='linknavbar'>
+	<!--<div class="container-fluid  style="max-width:800px"> -->
+	
+		<ul id='linknav'>
+			<li class="gomb1"><a href="fotozas" aria-current="page">FOTÓZÁS</a></li>
+			<li class="gomb1"><a href="portfolio">PORTFÓLIÓ</a></li>
+			<li class="gomb1"><a href="buildweb">WEBOLDAL KÉSZÍTÉS</a></li>
+			<li class="gomb1"><a href="prices">ÁRAK</a></li>
+			<li class="gomb1"><a href="blog">BLOG</a></li>
+			<li class="gomb1"><a href="kapcsolat">KAPCSOLAT</a></li>
+			<li class="gomb1"><a href="reservation">IDŐPONT FOGLALÁS</a></li>
+			<li class="gomb1"><a href="login">OVI/ISKOLA FOTÓK MEGRENDELÉS</a></li>
+		</ul>
+
+     </div>
+
+   
+    <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000;">
+      <div class="container-fluid">
+        <!-- Navbar brand  --> 
+        <a class="navbar-brand nav-link" target="_blank" href="https://mdbootstrap.com/docs/standard/">
+          <strong></strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
+          aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarExample01">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" aria-current="page" href="#intro"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA" rel="nofollow"
+                target="_blank"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://mdbootstrap.com/docs/standard/" target="_blank"></a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" href="https://mdbootstrap.com/docs/standard/" target="_blank"></a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" href="https://mdbootstrap.com/docs/standard/" target="_blank"></a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav list-inline">
+            <!-- Icons  --> 
+            <li class="">
+              <a class="nav-link" href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA" rel="nofollow"
+                target="_blank">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </li>
+            <li class="">
+              <a class="nav-link" href="https://www.facebook.com/mdbootstrap" rel="nofollow" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://twitter.com/MDBootstrap" rel="nofollow" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/mdbootstrap/mdb-ui-kit" rel="nofollow" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar 
+
+    <!-- Carousel wrapper -->
+    <div id="introCarousel" class="carousel slide carousel-fade shadow-2-strong" data-mdb-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-mdb-target="#introCarousel" data-mdb-slide-to="0" class="active"></li>
+        <li data-mdb-target="#introCarousel" data-mdb-slide-to="1"></li>
+        <li data-mdb-target="#introCarousel" data-mdb-slide-to="2"></li>
+		<li data-mdb-target="#introCarousel" data-mdb-slide-to="3"></li>
+		<li data-mdb-target="#introCarousel" data-mdb-slide-to="4"></li>
+		<li data-mdb-target="#introCarousel" data-mdb-slide-to="5"></li>
+		<li data-mdb-target="#introCarousel" data-mdb-slide-to="6"></li>
+		<li data-mdb-target="#introCarousel" data-mdb-slide-to="7"></li>
+      </ol>
+
+      <!-- Inner -->
+      <div class="carousel-inner">
+        <!-- Single item -->
+        <div class="carousel-item active">
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.2);">   
+	<!--     <div class="mask" <!--  style="
+                background: linear-gradient(
+                  45deg,
+                  rgba(190, 150, 103, 0.5),
+                  rgba(190, 150, 103, 0.4) 100%
+                );
+              "    
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <div class="text-white text-center">
+                <h1 class="mb-3">Learn Bootstrap 5 with MDB</h1>
+                <h5 class="mb-4">Best & free guide of responsive web design</h5>
+                <a class="btn btn-outline-light btn-lg m-2" href="https://www.youtube.com/watch?v=c9B4TPnak1A"
+                  role="button" rel="nofollow" target="_blank">Start tutorial</a>
+                <a class="btn btn-outline-light btn-lg m-2" href="https://mdbootstrap.com/docs/standard/"
+                  target="_blank" role="button">Download MDB UI KIT</a>
+              </div>
+            </div>  -->
+          </div>
+        </div>
+
+        <!-- Single item -->
+        <div class="carousel-item">
+     <!--     <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);"> -->
+	 <div class="mask" style="background-color: rgba(0, 0, 0, 0.2);">   
+	<!--     <div class="mask" <!--  style="
+                background: linear-gradient(
+                  45deg,
+                  rgba(190, 150, 103, 0.5),
+                  rgba(190, 150, 103, 0.4) 100%
+                );
+              "    
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <div class="text-white text-center">
+                <h2>You can place here any content</h2>
+              </div>
+            </div> -->
+          </div>
+        </div>
+
+        <!-- Single item -->
+        <div class="carousel-item">
+          <div class="mask" style="background-color: rgba(0, 0, 0, 0.2);">   
+	<!--     <div class="mask" <!--  style="
+                background: linear-gradient(
+                  45deg,
+                  rgba(190, 150, 103, 0.5),
+                  rgba(190, 150, 103, 0.4) 100%
+                );
+              "    
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <div class="text-white text-center">
+                <h2>And cover it with any mask</h2>
+                <a class="btn btn-outline-light btn-lg m-2"
+                  href="https://mdbootstrap.com/docs/standard/content-styles/masks/" target="_blank" role="button">Learn
+                  about masks</a>
+              </div>
+            </div> -->
+          </div>
+        </div>
+		 <!-- Single item -->
+        <div class="carousel-item">
+          <div class="mask" style="background-color: rgba(0, 0, 0, 0.2);">   
+	<!--     <div class="mask" <!--  style="
+                background: linear-gradient(
+                  45deg,
+                  rgba(190, 150, 103, 0.5),
+                  rgba(190, 150, 103, 0.4) 100%
+                );
+              "     
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <div class="text-white text-center">
+                <h2>And cover it with any mask</h2>
+                <a class="btn btn-outline-light btn-lg m-2"
+                  href="https://mdbootstrap.com/docs/standard/content-styles/masks/" target="_blank" role="button">Learn
+                  about masks</a>
+              </div>
+            </div> -->
+          </div>
+        </div>
+		
+		
+		
+		<div class="carousel-item">
+          <div class="mask" style="background-color: rgba(0, 0, 0, 0.2);">   
+	<!--     <div class="mask" <!--  style="
+                background: linear-gradient(
+                  45deg,
+                  rgba(190, 150, 103, 0.5),
+                  rgba(190, 150, 103, 0.4) 100%
+                );
+              "     
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <div class="text-white text-center">
+                <h2>And cover it with any mask</h2>
+                <a class="btn btn-outline-light btn-lg m-2"
+                  href="https://mdbootstrap.com/docs/standard/content-styles/masks/" target="_blank" role="button">Learn
+                  about masks</a>
+              </div>
+            </div> -->
+          </div>
+        </div>
+		
+		<div class="carousel-item">
+          <div class="mask" style="background-color: rgba(0, 0, 0, 0.2);">   
+	<!--     <div class="mask" <!--  style="
+                background: linear-gradient(
+                  45deg,
+                  rgba(190, 150, 103, 0.5),
+                  rgba(190, 150, 103, 0.4) 100%
+                );
+              "    
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <div class="text-white text-center">
+                <h2>And cover it with any mask</h2>
+                <a class="btn btn-outline-light btn-lg m-2"
+                  href="https://mdbootstrap.com/docs/standard/content-styles/masks/" target="_blank" role="button">Learn
+                  about masks</a>
+              </div>
+            </div>  -->
+          </div>
+        </div>
+		
+		<div class="carousel-item">
+          <div class="mask" style="background-color: rgba(0, 0, 0, 0.2);">   
+	<!--     <div class="mask" <!--  style="
+                background: linear-gradient(
+                  45deg,
+                  rgba(190, 150, 103, 0.5),
+                  rgba(190, 150, 103, 0.4) 100%
+                );
+              "     
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <div class="text-white text-center">
+                <h2>And cover it with any mask</h2>
+                <a class="btn btn-outline-light btn-lg m-2"
+                  href="https://mdbootstrap.com/docs/standard/content-styles/masks/" target="_blank" role="button">Learn
+                  about masks</a>
+              </div>
+            </div> -->
+          </div>
+        </div>
+		
+		<div class="carousel-item">
+           <div class="mask" style="background-color: rgba(0, 0, 0, 0.2);">   
+	<!--     <div class="mask" <!--  style="
+                background: linear-gradient(
+                  45deg,
+                  rgba(190, 150, 103, 0.5),
+                  rgba(190, 150, 103, 0.4) 100%
+                );
+              "   
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <div class="text-white text-center">
+                <h2>And cover it with any mask</h2>
+                <a class="btn btn-outline-light btn-lg m-2"
+                  href="https://mdbootstrap.com/docs/standard/content-styles/masks/" target="_blank" role="button">Learn
+                  about masks</a>
+              </div>
+            </div> -->
+          </div>
+        </div>
+		
+		
+		
+		
+      </div>
+      <!-- Inner -->
+	  
+	    
+
+      <!-- Inner -->
+	  
+	  
+	     <!-- Single item -->
+        
+     
+      <!-- Inner -->
+
+      <!-- Controls -->
+      <a class="carousel-control-prev" href="#introCarousel" role="button" data-mdb-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#introCarousel" role="button" data-mdb-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <!-- Carousel wrapper -->
+  </header>
+  <!--Main Navigation-->
+
+  <!--Main layout-->
+  <main class="mt-5">
+    <div class="container">
+      <!--Section: Content-->
+      <section>
+        <div class="row">
+          <div class="col-md-6 gx-5 mb-4">
+            <div class="bg-image hover-overlay ripple shadow-2-strong" data-mdb-ripple-color="light">
+              <img src="img/foto13.jpg" class="img-fluid" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-6 gx-5 mb-4">
+            <h4><strong>PORTRÉ FOTÓ KÉSZÍTÉSE</strong></h4>
+			<h4><strong>MIRE SZÁMÍTHATSZ, HA ENGEM BÍZOL MEG A PORTRÉK ELKÉSZÍTÉSÉVEL?</strong></h4>
+			
+            <p class="text-muted">
+             A portré fotózás alkalmával igyekszem a legtöbbet kihozni belőled, és ezeket visszaadni a képeken is.
+Az évek alatt megtanultam azt, hogy milyen pózok amik jól állnak neked portré fotózás közben.
+Nálam a portré fotózás általában vidáman telik, szeretem megmutatni a modell igazi arcát.
+A portré fotózás helyszíne lehet: stúdió különböző világításokkal, viszont ha a természetes fényt szereted,
+akkor akár kint is készíthetek rólad portré fotókat.
+Az elkészült képek úgyis önmagukért beszélnek, az eredménnyel meg leszel elégedve.
+Ha felkeltettem az érdeklődésedet, akkor keress bátran portré fotózás ügyben !
+           </p>
+          </div>
+        </div>
+      </section>
+      <!--Section: 1  Content-->
+
+      <hr class="my-5" />
+
+      <!--Section: Content-->
+      <section class="text-center">
+        <h4 class="mb-5"><strong>Szolgáltatások</strong></h4>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-12 mb-4">
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="img/foto11.jpg" class="img-fluid" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">PORTRÉ FOTÓ KÉSZÍTÉS</h5>
+                <p class="card-text">
+                  Meguntad a homályos facebook  profilképeket? Itt az ideje lecserélni egy profi stúdiós képre. Ha szükséged van egy jó képre önéletrajzodhoz, cégednek profi bemutatkozáshoz, nézd meg a portréfotóimat , keress vagy foglalj időpontot.
+                </p>
+                <a href="#!" class="btn btn-primary">Viktória reflektor fényben</a>
+              </div>
+            </div>
+          </div>
+<!--házasság -->
+ <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="img/foto14.jpg" class="img-fluid" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">HÁZASSÁGKÖTÉS FOTÓZÁS</h5>
+                <p class="card-text">
+                 Esküvői fotózás
+                 Keresztelő, névadó
+                 Szalagavató, ballagás
+                 Családi események
+                </p>
+                <br><br><br>
+                <a href="reservation" class="btn btn-primary">Eskövő időpont foglalás</a>
+              </div>
+            </div>
+          </div>
+
+         <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="img/foto12.jpg" class="img-fluid" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">CSALÁDI FOTÓZÁS</h5>
+                <p class="card-text">
+                  Családi fotózás jó hangulatban. Otthonodban vagy a szabadban 
+                </p>
+                <br><br><br>
+                <a href="reservation" class="btn btn-primary">Időpont foglalás</a>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </section>
+      <!--Section: 2 Content-->
+	  
+	  
+	     <!--Section: Content-->
+      <section class="text-center">
+       
+
+        <div class="row" >
+          <div class="col-lg-12 col-md-8 mb-6">
+            <div class="card" >
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="img/foto10.jpg" class="img-fluid" style="max-width:600px" align="center" />
+                <a href="">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">DIVAT FOTÓ KÉSZÍTÉS</h5>
+                <p class="card-text">
+                 A divat fotózásnál fontos a fotós személye és szaktudása az a tényező, amin eldőlhet a fotózás sikere. Az alapvető hangulatot a fotós adja meg a fényekkel, a perspektívákkal és a plánokkal, éppen ezért érdemes hivatásos, profi divatfotóst választani, aki rendelkezik megfelelő tapasztalattal, felszereléssel, rutinnal és kreativitással.
+                </p>
+                <a href="" class="btn btn-primary">Dóri reflektor fényben</a>
+              </div>
+            </div>
+          </div>
+		  </div>
+<!--gyerek studio -->
+</section>
+	  
+
+
+
+<section class="text-center">
+<div class="row " >
+          <div class="col-lg-6 col-md-8 mb-6">
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="img/foto09.jpg" class="img-fluid" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">GYERMEK STÚDIÓ FOTÓZÁS</h5>
+                <p class="card-text">
+                  Profi képek készítése csemetédről  stúdióban, ahogy eddig még soha. Óvodai iskolai fotók készítése. High key és low key tűéles képek letisztult hátterek.
+                </p>
+                <a href="#!" class="btn btn-primary">Hanna reflektor fényben</a>
+              </div>
+            </div>
+          </div>
+
+         
+
+         <div class="col-lg-6 col-md-6 mb-6">
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="img/foto15.jpg" class="img-fluid" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">ESEMÉNY FOTÓZÁS</h5>
+                <p class="card-text">
+                 Események , Rendezvények Fotózása<br><br>
+                </p>
+                <a href="#!" class="btn btn-primary">Henrix Farm Fotózás</a>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </section>
+	  
+
+      <hr class="my-5" />
+
+      <!--Section: Content-->
+      <section class="mb-5">
+        <h4 class="mb-5 text-center"><strong>Iratkozz fel hírlevelemre !  </strong></h4>
+
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-6">
+            <form action="#" th:action="@{/feldolg_subscribe}"  th:object="${subscribe}"  method="post">
+              <!-- 2 column grid layout with text inputs for the first and last names -->
+              <div class="row mb-4">
+                <div class="col">
+                  <div class="form-outline">
+                    <input type="text" id="form3Example1" class="form-control" th:field="*{firstname}"/>
+                    <label class="form-label" for="form3Example1">Keresztnév</label>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-outline">
+                    <input type="text" id="form3Example2" class="form-control" th:field="*{lastname}" />
+                    <label class="form-label" for="form3Example2">Vezetéknév</label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Email input -->
+              <div class="form-outline mb-4">
+                <input type="email" id="form3Example3" class="form-control" th:field="*{email}" />
+                <label class="form-label" for="form3Example3">Email cím</label>
+              </div>
+
+              <!-- Checkbox -->
+              <div class="form-check d-flex justify-content-center mb-4">
+                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" checked />
+                <label class="form-check-label" for="form2Example3">
+                  Subscribe to our newsletter
+                </label>
+              </div>
+
+              <!-- Submit button -->
+              <button type="submit"  value="Submit" class="btn btn-primary btn-block mb-4">
+                Elküldés
+              </button>
+
+              <!-- Register buttons -->
+              <div class="text-center">
+                <p></p>
+                <a href="https://www.facebook.com/Biafot%C3%B3-102646818593536" class="btn btn-primary m-1" role="button" rel="nofollow"
+				target="_blank">
+				<i class="fab fa-facebook-f"></i>
+			</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!--Section: Content-->
+    </div>
+  </main>
+  <!--Main layout-->
+
+  <!--Footer-->
+  <footer class="bg-light text-lg-start">
+    <div class="py-4 text-center">
+      <a role="button" class="btn btn-primary btn-lg m-2"
+        href="kapcsolat" rel="nofollow" target="_blank">
+        Kapcsolat felvétel
+      </a>
+      <a role="button" class="btn btn-primary btn-lg m-2" href="reservation" target="_blank">
+        Időpontfoglalás
+      </a>
+    </div>
+
+    <hr class="m-0" />
+
+<div class="text-center py-4 align-items-center">
+			<p>Kövesse a Biafoto-t a facebookon </p>
+			<a href="" class="btn btn-primary m-1" role="button"
+				rel="nofollow" target="_blank">
+				<i class="fab fa-youtube"></i>
+				
+			</a>
+			<a href="https://www.facebook.com/Biafot%C3%B3-102646818593536" class="btn btn-primary m-1" role="button" rel="nofollow"
+				target="_blank">
+				<i class="fab fa-facebook-f"></i>
+			</a>
+			<a href="" class="btn btn-primary m-1" role="button" rel="nofollow"
+				target="_blank">
+				<i class="fab fa-twitter"></i>
+			</a>
+			<a href="" class="btn btn-primary m-1" role="button" rel="nofollow"
+				target="_blank">
+				<i class="fab fa-github"></i>
+			</a>
+		</div>
+
+   <!-- Copyright -->
+		<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+			© 2021 Created by Tóth István:
+			<a class="text-dark" href="https://www.biafoto.hu/">Biafoto.hu</a>
+		</div>
+		<!-- Copyright -->
+  </footer>
+  <!--Footer-->
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

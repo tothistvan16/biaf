@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Material Design for Bootstrap</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+      <!--Main Navigation-->
+  <header>
+    
+	
+<!-- Fejléc --> 
+  <div class="fejlec">
+		<span class="telefonszam">Telefonszám : +36202239149</span>
+	    <a href="mailto:biafoto.hu@gmail.com">  <span class="email_cim">Email cím: biafoto.hu@gmail.com</span></a>
+		
+         <a href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA" rel="nofollow"
+         target="_blank">  <span class="ikon"> <i class="fab fa-youtube"></i> </span></a>
+		 
+		 <a href="https://www.facebook.com/mdbootstrap" rel="nofollow"
+         target="_blank">  <span class="ikon"> <i class="fab fa-facebook-f"></i> </span></a>
+		 
+		 <a href="https://twitter.com/MDBootstrap" rel="nofollow"
+         target="_blank">  <span class="ikon"> <i class="fab fa-twitter"></i> </span></a>
+		 
+		 <a href="https://github.com/mdbootstrap/mdb-ui-kit" rel="nofollow"
+         target="_blank">  <span class="ikon"> <i class="fab fa-github"></i> </span></a>	  
+</div>		  
+<!-- LOGO --> 
+	<div class="sor">
+	<div class="kepDiv">
+		<span class="logo_helper"></span>
+		<a href="/">
+			<img src="img/logo5.png" alt="Biafoto" id="logo" class="kep">
+		</a>
+	</div>
+    </div>
+	
+	
+
+<!-- Navbar -->
+	<div id='linknavbar'>
+	<!--<div class="container-fluid  style="max-width:800px"> -->
+	
+		<ul id='linknav'>
+			<li class="gomb1"><a href="fotozas" aria-current="page">FOTÓZÁS</a></li>
+			<li class="gomb1"><a href="portfolio">PORTFÓLIÓ</a></li>
+			<li class="gomb1"><a href="buildweb">WEBOLDAL KÉSZÍTÉS</a></li>
+			<li class="gomb1"><a href="prices">ÁRAK</a></li>
+			<li class="gomb1"><a href="blog">BLOG</a></li>
+			<li class="gomb1"><a href="kapcsolat">KAPCSOLAT</a></li>
+			<li class="gomb1"><a href="reservation">IDŐPONT FOGLALÁS</a></li>
+			<li class="gomb1"><a href="login">OVI/ISKOLA FOTÓK MEGRENDELÉS</a></li>
+		</ul>
+
+     </div>
+      </header>
+<!-- MAIN --> 
+
+  <main class="mt-5">
+<h1 class="home">Iskola/Ovi Fotók Megrendelése</h1>
+<h1 class="home">Adja meg a csoport azonosítót és kódot</h1>
+
+    <div class="container">
+    
+    
+    <div class="form-input" style="text-align:center" >
+							<form action="#" th:action="@{/auth_feldolg}"  th:object="${loginobj}"  method="post">
+
+								<p>Csoport Azonosító: <input type="text" th:field="*{csoport}" /> </p>
+								<p>Jelszó: <input type="password" th:field="*{password}" /> </p>
+								
+								<p><input type="submit" value="Submit" />
+
+							</form>
+    
+    
+    
+      
+	  
+    </div> <!-- container -->
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="hu" xmlns:th="https://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<title>Material Design for Bootstrap</title>
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+	<!-- MDB -->
+	<link rel="stylesheet" href="css/mdb.min.css" />
+	<!-- Custom styles -->
+	<link rel="stylesheet" href="css/imggalery01.css" media="all">
+
+</head>
+
+
+<body>
+
+	<div class="container">
+
+
+		<form action="#" th:action="@{/oredr_pr}"  method="post">
+			<h1>Megrendelő</h1>
+<h2  th:text="${auth.password}" > </h2>
+
+
+			<article th:each="book, itemStat : ${form.photos}">
+		
+			<h2  th:text="${auth.id}" > </h2>
+			
+				<div class="row">
+					<div class="col-md-4 gx-5 mb-4"><!--1 rész -->
+						<div class="img" data-mdb-ripple-color="light">
+							<img src="" class="img-fluid" th:src="${book.getPhotourlweb()}" alt=""
+								th:value="${book.getPhotourlweb()}" th:field="*{form.photos[__${itemStat.index}__].photourlweb}"/>
+
+						</div>
+					</div>
+					
+					<div class="col-md-4 gx-5 mb-4"><!-- 2 rész -->
+					<header>
+					    <div>	<span> <label style="float:left; ">Note: </label>  <p th:text="${auth.password}" th:field="*{form.photos[__${itemStat.index}__].note}" th:name="|books[${itemStat.index}].note|"> </p></span></div>
+						<div>	<span> <label style="float:left; ">Foto neve: </label>  <p th:text="${book.getPhotoname()}" th:field="*{form.photos[__${itemStat.index}__].photoname}"> </p></span></div>
+						<div>	<span> <label style="float:left; ">Csoport: </label>  <p th:text="${book.getCsoport()}" th:field="*{form.photos[__${itemStat.index}__].csoport}"> </p></span></div>
+						<div>	<span> <label style="float:left; ">Csoport képszám: </label>  <p th:text="${book.getCsoportkepszam()}" th:field="*{form.photos[__${itemStat.index}__].csoportkepszam}"> </p></span></div>
+						<div>	<span> <label style="float:left; ">Id: </label>  <p  th:name="|books[${itemStat.index}].id|" th:value="${book.getId()}" > </p></span></div>
+						</header>
+
+						<footer>
+							<address cl>
+							   <p>Megrendeléshez jelolje be ! </p>
+							   <p>És válassza ki a méretet darbszám beírással </p>
+								<input class="chekbox" type="checkbox" name="active" th:name="|books[${itemStat.index}].bol|" th:value="${book.isBol()}" th:field="*{form.photos[__${itemStat.index}__].bol}"/>
+							</address>
+						</footer>
+					</div>
+			
+					<div class="col-md-4 gx-5 mb-4"><!-- 3 rész -->
+					 <label>Méret darabszám</label> 
+				<!--	<p>Azonosito:<input  th:text="${auth.password}"  th:field="*{pwd}"  th:value="${auth.password}" /> </p>-->
+					
+					 <p><input hidden th:name="|form.photos[${itemStat.index}].photoname|" th:value="${book.getPhotoname()}" th:field="*{form.photos[__${itemStat.index}__].photoname}" /> </p>
+					 <p><input hidden th:name="|form.photos[${itemStat.index}].csoport|" th:value="${book.getCsoport()}" th:field="*{form.photos[__${itemStat.index}__].csoport}" /> </p>
+					 <p><input hidden th:name="|form.photos[${itemStat.index}].csoportkepszam|" th:value="${book.getCsoportkepszam()}" th:field="*{form.photos[__${itemStat.index}__].csoportkepszam}" /> </p>
+				     <p><input hidden th:name="|form.photos[${itemStat.index}].id|" th:value="${book.getId()}" th:field="*{form.photos[__${itemStat.index}__].id}" /> </p>
+					 <p>M_9x13:  <input maxlength="2" size="2" type="number" th:name="|form.photos[${itemStat.index}].m_9x13|" th:value="${book.getM_9x13()}" th:field="*{form.photos[__${itemStat.index}__].m_9x13}" /> </p>
+                     <p>M_10x15: <input type="number" th:name="|form.photos[${itemStat.index}].m_10x15|" th:value="${book.getM_10x15()}" th:field="*{form.photos[__${itemStat.index}__].m_10x15}" maxlength="2" size="2"/> </p>
+                     <p>M_13x18: <input type="number" th:name="|form.photos[${itemStat.index}].m_13x18|" th:value="${book.getM_13x18()}" th:field="*{form.photos[__${itemStat.index}__].m_13x18}"  maxlength="2" size="2" /> </p>
+                     <p>M_15x20: <input type="number" th:name="|form.photos[${itemStat.index}].m_15x20|" th:value="${book.getM_15x20()}" th:field="*{form.photos[__${itemStat.index}__].m_15x20}" maxlength="2" size="2"/> </p>
+                     <p>M_28x24: <input type="number" th:name="|form.photos[${itemStat.index}].m_28x24|" th:value="${book.getM_28x24()}" th:field="*{form.photos[__${itemStat.index}__].m_28x24}" maxlength="2" size="2"/> </p>
+                     <p>M_20x30: <input type="number" th:name="|form.photos[${itemStat.index}].m_20x30|" th:value="${book.getM_20x30()}" th:field="*{form.photos[__${itemStat.index}__].m_20x30}" maxlength="2" size="2"/> </p>
+                     
+					</div>
+
+
+				</div><!-- Row -->
+				
+
+				</article>
+				<input type="hidden" name="pass" th:value="${auth.password}"/>
+				<input type="hidden" name="id" th:value="${auth.getId()}"/>
+					<input type="submit" value="submit" />
+		</form>
+
+	</div>
+
+</body>
+
+</html>
